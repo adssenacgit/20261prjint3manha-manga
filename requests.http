@@ -1,0 +1,49 @@
+### Swagger
+GET http://localhost:8080/swagger-ui.html
+
+### Criar mangá
+POST http://localhost:8080/api/mangas
+Content-Type: application/json
+
+{
+  "titulo": "One Piece",
+  "autor": "Eiichiro Oda",
+  "capaUrl": "https://exemplo.com/one-piece.jpg",
+  "categoria": "Aventura",
+  "status": 1
+}
+
+### Listar mangás não apagados
+GET http://localhost:8080/api/mangas
+
+### Alterar status do mangá para inativo
+PATCH http://localhost:8080/api/mangas/1/status
+Content-Type: application/json
+
+{
+  "status": 0
+}
+
+### Apagar mangá logicamente
+DELETE http://localhost:8080/api/mangas/1
+
+### Criar usuário
+POST http://localhost:8080/api/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Felipe",
+  "email": "felipe@email.com",
+  "senha": "123456",
+  "status": 1
+}
+
+### Criar favorito
+POST http://localhost:8080/api/favoritos
+Content-Type: application/json
+
+{
+  "usuarioId": 1,
+  "mangaId": 1,
+  "status": 1
+}
