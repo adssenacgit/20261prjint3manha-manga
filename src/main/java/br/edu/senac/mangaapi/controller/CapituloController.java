@@ -18,12 +18,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/capitulos")
 @Tag(name = "Capítulos", description = "CRUD de capítulos")
+@CrossOrigin("*")     
 public class CapituloController {
 
     private final CapituloService capituloService;
